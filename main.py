@@ -17,8 +17,8 @@ def result():
         firstname = random_name("vornamen_w.csv")
     place = random_name("plz-ort.csv").replace(",", " ")
     lastname = random_name("nachnamen.csv")
-    print(lastname)
-    return render_template("result.html", firstname=firstname, lastname=lastname, place=place)
+    birthdate = generate_birthdate(1957, 2003).strftime("%d.%m.%Y")
+    return render_template("result.html", firstname=firstname, lastname=lastname, place=place, birthdate=birthdate)
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=80, debug=False)
