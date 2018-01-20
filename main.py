@@ -1,5 +1,6 @@
-from flask import Flask
-from flask import render_template
+from flask import Flask, request, render_template
+
+from filereader import random_name
 
 app = Flask(__name__)
 
@@ -7,5 +8,16 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
+@app.route('/result')
+def result():
+    gender = request.args.get("gender")
+    if gender == "m":
+        firstname = "Max"
+    elif gender == "w":
+        firstname = random_name("vornamen_w.csv")
+    lastname = random_name("nachnamen (2).csv")
+    print(lastname)
+    return render_template("result.html", firstname=firstname, lastname=lastname)
+
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=80, debug=False)
+    app.run(host="0.0.0.0", port=80, debug=True)
