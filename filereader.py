@@ -14,7 +14,7 @@ def read_my_lines(csv_reader, lines_list):
                 raise StopIteration
 
 
-def random_name(file_location):
+def random_line(file_location):
     with open(file_location, mode="r") as file:
         rand_line = random.randint(0, len(file.readlines()))
 
