@@ -15,7 +15,7 @@ def result():
         firstname = "Max"
     elif gender == "w":
         firstname = random_name("vornamen_w.csv")
-    lastname = random_name("nachnamen (2).csv")
+    lastname = random_name("nachnamen.csv")
     print(lastname)
     return render_template("result.html", firstname=firstname, lastname=lastname)
 
