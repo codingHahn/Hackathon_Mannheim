@@ -1,7 +1,7 @@
 from flask import Flask, request, render_template
 import random
 
-from filereader import random_line generate_birthdate, rand_phone
+from filereader import random_line, generate_birthdate, rand_phone
 
 
 app = Flask(__name__, static_url_path='/static')
