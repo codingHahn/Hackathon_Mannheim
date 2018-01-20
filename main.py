@@ -12,7 +12,7 @@ def index():
 def result():
     gender = request.args.get("gender")
     if gender == "m":
-        firstname = "Max"
+        firstname = random_name("vornamen_m.csv")
     elif gender == "w":
         firstname = random_name("vornamen_w.csv")
     lastname = random_name("nachnamen.csv")
