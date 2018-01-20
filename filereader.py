@@ -20,7 +20,10 @@ def random_line(file_location):
 
     with open(file_location, mode="r") as file:
         lines = list(read_my_lines(file, [rand_line]))
-        return lines[0]
+        try:
+            return lines[0]
+        except:
+            random_line(file_location)
 
 
 def generate_birthdate(min_yrs, max_yrs):
@@ -40,6 +43,6 @@ def rand_phone(prefix):
 
 
 if __name__ == "__main__":
-    print(random_name("vornamen_w.csv"))
+    print(random_line("vornamen_w.csv"))
     print(generate_birthdate(1957, 2003))
     print(rand_phone("160"))
