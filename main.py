@@ -15,9 +15,10 @@ def result():
         firstname = random_name("vornamen_m.csv")
     elif gender == "w":
         firstname = random_name("vornamen_w.csv")
+    place = random_name("plz-ort.csv").replace(",", " ")
     lastname = random_name("nachnamen.csv")
     print(lastname)
-    return render_template("result.html", firstname=firstname, lastname=lastname)
+    return render_template("result.html", firstname=firstname, lastname=lastname, place=place)
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=80, debug=False)
