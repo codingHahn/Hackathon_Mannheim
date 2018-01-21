@@ -1,67 +1,110 @@
 <html>
-
-<meta charset="utf-8"/>
-
- <title>Identitätsgenerator</title>
-
-<style>
-
-h1{color:#84f30c; font-size: 22pt;}
-
-table{font-size: 15pt;}
-
-h1,table{font-family: sans-serif;;}
-
-body{color:white}
-
-img{width: 40%;margin-right: 35%}
-
-#oben{background-color: black; width: 50%; height: 100px; float:left;text-align: right;}
-
-#titel{margin-bottom:100px }
-
-td{vertical-align: top;}
-
-#unten{float:right;margin-right: 20%; margin-top: 50px}
-
-</style>
-
- <body bgcolor="black">
-
-  <font face="Arial"><center><h1><b>FIMP - Fake Identity Maker Pro</b></h1></center></font>
-
-  <center>
-
- <h1 id="titel">Generierte Identität</h1>
-
- <div id="oben">
-     
-     <img src="{{picture}}" alt="Profilbild"> </div>
-
-</center>
-
- <table>
-
-     <tr> <td><b>Name:</b></td> <td>{{firstname}} {{lastname}}</td> </tr>
-
-  <tr> <td><b>Geburtsdatum</b></td> <td>{{birthdate}}</td></tr>
-
-  <tr> <td><b>Adresse</b></td> <td>{{address}} <br> {{place}} <br> Deutschland</td> </tr>
-
-  <tr> <td><b>Telefonnummer</b></td> <td>{{landline}}</td> </tr>
-
-  <tr> <td><b>Handynummer</b></td> <td>{{cellphone}}</td></tr>
-
- </table>
- <br/>
-<div id="unten">
-    
-<iframe
-      frameborder="0" style="border:0; bottom: 0"
-      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDc36aZ1OQ8vAHCFloISKPIuFnKhf53d6Q&q={{place}}" allowfullscreen>
-	  </iframe>
-    <button type="button" onClick="location.reload()" id="berechnen">Erneut generieren</button> </div>
-
- </body>
-
+  <meta charset="utf-8"/>
+  <title>Identitätsgenerator
+  </title>
+  <style>
+    h1{
+      color:#84f30c;
+      font-size: 22pt;
+    }
+    table{
+      font-size: 15pt;
+    }
+    h1,table{
+      font-family: sans-serif;
+      ;
+    }
+    body{
+      color:white}
+    img{
+      width: 40%;
+      margin-right: 35%}
+    #oben{
+      background-color: black;
+      width: 50%;
+      height: 100px;
+      float:left;
+      text-align: right;
+    }
+    #titel{
+      margin-bottom:100px }
+    td{
+      vertical-align: top;
+    }
+    #unten{
+      float:right;
+      margin-right: 20%;
+      margin-top: 50px}
+  </style>
+  <body bgcolor="black">
+    <font face="Arial">
+      <center>
+        <h1>
+          <b>FIMP - Fake Identity Maker Pro
+          </b>
+        </h1>
+      </center>
+    </font>
+    <center>
+      <h1 id="titel">Generierte Identität
+      </h1>
+      <div id="oben">
+        <img src="{{picture}}" alt="Profilbild"> 
+      </div>
+    </center>
+    <table>
+      <tr> 
+        <td>
+          <b>Name:
+          </b>
+        </td> 
+        <td>{{firstname}} {{lastname}}
+        </td> 
+      </tr>
+      <tr> 
+        <td>
+          <b>Geburtsdatum
+          </b>
+        </td> 
+        <td>{{birthdate}}
+        </td>
+      </tr>
+      <tr> 
+        <td>
+          <b>Adresse
+          </b>
+        </td> 
+        <td>{{address}} 
+          <br> {{place}} 
+          <br> Deutschland
+        </td> 
+      </tr>
+      <tr> 
+        <td>
+          <b>Telefonnummer
+          </b>
+        </td> 
+        <td>{{landline}}
+        </td> 
+      </tr>
+      <tr> 
+        <td>
+          <b>Handynummer
+          </b>
+        </td> 
+        <td>{{cellphone}}
+        </td>
+      </tr>
+    </table>
+    <br/>
+    <div id="unten">
+      <iframe
+              frameborder="0" style="border:0; bottom: 0"
+              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDc36aZ1OQ8vAHCFloISKPIuFnKhf53d6Q&q={{place}}" allowfullscreen>
+      </iframe>
+      <button type="button" onClick="location.reload()" id="berechnen">Erneut generieren
+      </button> 
+    </div>
+  </body>
 </html>
+
