@@ -23,6 +23,8 @@ def get_streets(plz, town_name):
                 street = street.text[:street.text.index(" Plz:")]
                 streets_str.append(street)
             break
+        else:
+            return "Nothing found"
     return streets_str
 
 
