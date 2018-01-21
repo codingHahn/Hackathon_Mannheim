@@ -34,7 +34,9 @@ td{vertical-align: top;}
 
  <h1 id="titel">Generierte Identität</h1>
 
- <div id="oben"> <img src="{{picture}}" alt="Profilbild"> </div>
+ <div id="oben">
+     
+     <img src="{{picture}}" alt="Profilbild"> </div>
 
 </center>
 
@@ -51,8 +53,14 @@ td{vertical-align: top;}
   <tr> <td><b>Handynummer</b></td> <td>{{cellphone}}</td></tr>
 
  </table>
-
-<div id="unten"> <button type="button" onClick="location.reload()" id="berechnen">Erneut generieren</button> </div>
+ <br/>
+<div id="unten">
+    
+<iframe
+      frameborder="0" style="border:0; bottom: 0"
+      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDc36aZ1OQ8vAHCFloISKPIuFnKhf53d6Q&q={{place}}" allowfullscreen>
+	  </iframe>
+    <button type="button" onClick="location.reload()" id="berechnen">Erneut generieren</button> </div>
 
  </body>
 
