@@ -10,6 +10,8 @@ def get_streets(plz, town_name):
     soup = BeautifulSoup(response.text, "html.parser")
     results = soup.find_all("li")
 
+    streets_str = None
+
     for result in results:
         res = result.find("a")
         if town_name in res.text:
@@ -23,9 +25,10 @@ def get_streets(plz, town_name):
                 street = street.text[:street.text.index(" Plz:")]
                 streets_str.append(street)
             break
-        else:
-            return "Nothing found"
-    return streets_str
+    if streets_str is not None:
+        return streets_str
+    else:
+        return ["Nothing found"]
 
 
 def rand_street(plz, town_name):
