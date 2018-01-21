@@ -30,7 +30,9 @@ def result():
     cell_prefix = ["151", "160", "170", "171", "175", "152", "151", "162", "172", "173", "174", "157", "163", "177", "178", "159"]
     cellphone = rand_phone("0" + cell_prefix[random.randint(0, len(cell_prefix) - 1)], True)
 
-    return render_template("result.html", firstname=firstname, lastname=lastname, address=address, place=place, picture=picture, birthdate=birthdate, cellphone=cellphone, landline=landline)
+    iban = random_line("iban.csv")
+
+    return render_template("result.html", firstname=firstname, lastname=lastname, address=address, place=place, picture=picture, birthdate=birthdate, cellphone=cellphone, landline=landline, iban=iban)
 
 
 if __name__ == "__main__":
