@@ -35,11 +35,13 @@ def generate_birthdate(min_yrs, max_yrs):
     return(datetime(year, month, day))
 
 
-def rand_phone(prefix):
+def rand_phone(prefix, want_sep):
     n = '0000000000'
     while '9' in n[3:6] or n[3:6]=='000' or n[6]==n[7]==n[8]==n[9]:
         n = prefix + str(random.randint(10**9, 10**10-1))[3:]
-    return n[:3] + '-' + n[3:]
+    if want_sep:
+        return n[:3] + '-' + n[3:]
+    return n[:3] + n[3:]
 
 
 if __name__ == "__main__":
