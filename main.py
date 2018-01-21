@@ -43,7 +43,9 @@ def result():
     iban = random_line("iban.csv")
     print("Got IBAN")
 
-    return render_template("result.html", firstname=firstname, lastname=lastname, address=address, place=place, picture=picture, birthdate=birthdate, cellphone=cellphone, landline=landline, iban=iban)
+    g_address = address.replace(" ", "%20")
+
+    return render_template("result.html", firstname=firstname, lastname=lastname, address=address, place=place, picture=picture, birthdate=birthdate, cellphone=cellphone, landline=landline, iban=iban, g_address=g_address)
 
 
 if __name__ == "__main__":
