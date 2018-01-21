@@ -27,7 +27,7 @@ def get_streets(plz, town_name):
 
 
 def rand_street(plz, town_name):
-    streets = get_streets("73463", "Westhausen")
+    streets = get_streets(plz, town_name)
     street = streets[random.randint(0, len(streets) - 1)]
     return street
 
