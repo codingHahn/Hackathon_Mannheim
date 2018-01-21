@@ -25,7 +25,7 @@ def result():
     place_and_landline = random_line("vorwahl_ganz.csv").split(",")
     print("got place_and_landline")
     place = place_and_landline[0] + " " + place_and_landline[1]
-    landline = rand_phone(place_and_landline[2], False)
+    landline = rand_phone(place_and_landline[2][1:], False)
     print("Got landline")
     lastname = random_line("nachnamen.csv")
     print("Got last name")
