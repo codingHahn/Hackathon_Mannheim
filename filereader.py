@@ -45,7 +45,7 @@ def rand_phone(prefix, want_sep):
         n = prefix + str(random.randint(10**9, 10**10-1))[3:]
         c += 1
     if want_sep:
-        return n[:3] + '-' + n[3:]
+        return n[:4] + '-' + n[4:]
     return n[:3] + n[3:]
 
 
