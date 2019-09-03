@@ -2,14 +2,10 @@ import requests
 import random
 
 from bs4 import BeautifulSoup
-from filereader import random_line, generate_birthdate, rand_phone
 
 
 def get_streets(plz, town_name):
-    try:
-        response = requests.get("http://www.maptier.de/suche.php?q=" + plz)
-    except:
-        return [random_line("strassen.csv") + " ! Gibt es nicht wirklich !"]
+    response = requests.get("http://www.maptier.de/suche.php?q=" + plz)
 
     soup = BeautifulSoup(response.text, "html.parser")
     results = soup.find_all("li")
